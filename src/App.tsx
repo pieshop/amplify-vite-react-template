@@ -22,7 +22,7 @@ const fetchData = async () => {
       if (error.response) {
         const {
           statusCode,
-          headers,
+          // headers,
           body
         } = error.response;
         console.error(`Received ${statusCode} error response with payload: ${body}`);
