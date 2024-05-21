@@ -1,6 +1,6 @@
-import type { APIGatewayProxyHandler } from "aws-lambda";
+import type { APIGatewayProxyHandlerV2 } from "aws-lambda";
 
-export const handler: APIGatewayProxyHandler = async (event) => {
+export const handler: APIGatewayProxyHandlerV2 = async (event) => {
   console.log("event", event);
   return {
     statusCode: 200,
@@ -9,6 +9,6 @@ export const handler: APIGatewayProxyHandler = async (event) => {
       "Access-Control-Allow-Origin": "*", // Restrict this to domains you trust
       "Access-Control-Allow-Headers": "*", // Specify only the headers you need to allow
     },
-    body: JSON.stringify("Hello from myFunction!"),
+    body: JSON.stringify("Hello from api-function!"),
   };
 };
